@@ -16,3 +16,11 @@ const user: User = {
 user.id = 1000; //warning ,since readonly property but still id will be change
 console.log(typeof user);
 console.log(Object.values(user));
+
+//type (alias) custom type name using types,union
+type ID = string;
+const myId: ID = "202SCT";
+console.log(myId);
+type status = "pending" | "success" | "failed";
+const currentStatus: status = "failed";
+console.log(currentStatus);
