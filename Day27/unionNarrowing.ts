@@ -3,13 +3,14 @@ type admin = {
   name: string;
   permission: string[];
 };
+// console.log(admin); when we define ,it does not declared ,that why it will give referenceError
 type user = {
   // role:"user",
   name: string;
   email: string;
 };
 
-type person = admin | user;
+type person = admin | user; // Discriminated Unions
 const p1: person = {
   // role:"admin",
   name: "Masum",
@@ -40,3 +41,22 @@ display(p2);
 console.log("email" in p2);
 console.log("email" in p1);
 console.log(Object.entries(testObj));
+
+//Intersection
+type User = {
+  name: string;
+  email: string;
+};
+
+type Employee = {
+  employeeId: number;
+  department: string;
+};
+type EmployeeUser = User & Employee;
+const person: EmployeeUser = {
+  name: "Masum",
+  email: "masum@example.com",
+  employeeId: 101,
+  department: "Engineering",
+};
+console.log(person);
