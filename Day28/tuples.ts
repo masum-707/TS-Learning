@@ -14,7 +14,7 @@ const user: UserTuple = [1, "Nahid"];
 console.log(typeof user);
 
 //rest element
-type Names = [string, ...string[]]; //must be string type
+type Names = [string, ...string[]]; //rest parameter must be string type
 
 const friends: Names = ["Ali", "Tanim", "Jora"];
 //spread
