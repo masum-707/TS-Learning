@@ -20,7 +20,7 @@ interface Order extends Entity {
 }
 const users: User[] = [
   { id: "user1", name: "Masum", email: "masum@example.com", phone: "5100" },
-  { id: "user2", name: "Bob Jones", email: "bob@example.com", phone: "5200" },
+  { id: "user2", name: "salman", email: "salman@example.com", phone: "5200" },
 ];
 const products: Product[] = [
   { id: "pd1", name: "phone", price: 15000 },
@@ -49,7 +49,7 @@ const orderItem: Order[] = [
 function details(user: User): void {
   for (const item of orderItem) {
     if (item.user.id === user.id) {
-      console.log(`User Name: ${user.name}.\nProducrt list:`);
+      console.log(`User Name: ${user.name}.\nProduct list:`);
       for (const pd of item.product) {
         console.log(`Product Name: ${pd.name}. Price: ${pd.price}`);
       }

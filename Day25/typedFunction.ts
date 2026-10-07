@@ -1,4 +1,4 @@
-function introduce(name: string, age: number, active: boolean) {
+function introduce(name: string, age: number, active: boolean): void {
   console.log(name, age, active);
 }
 introduce("Masum", 25, true);
